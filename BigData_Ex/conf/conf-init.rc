@@ -1,0 +1,9 @@
+-- Hive Parameters
+SET hive.exec.dynamic.partition=true;
+SET hive.exec.dynamic.partition.mode=nonstrict;
+SET hive.exce.parallel=true;
+SET hive.auto.convert.join=true;
+SET hive.support.concurrency=false;
+SET hive.enforce.bucketing=true;
+SET hive.enforce.sorting=true;
+SET hive.groupby.orderby.position.alias=true;
