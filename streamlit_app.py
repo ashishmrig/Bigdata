@@ -1,2 +1,6 @@
 import streamlit as st
-st.table('hello world')
+import pandas as pd
+import numpy as np
+
+df = np.random.randn(10, 20)
+st.dataframe(df)
