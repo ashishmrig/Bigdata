@@ -6,6 +6,7 @@ df = pd.DataFrame({
     'second column': [10, 20, 30, 40]
     })
 
+st.table(df)
 option = st.selectbox(
     'Which number do you like best?',
      df['first column'])
