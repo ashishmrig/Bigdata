@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import matplotlib as mp
 
 # Add a selectbox to the sidebar:
 add_selectbox = st.sidebar.selectbox(
