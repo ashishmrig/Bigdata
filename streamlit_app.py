@@ -7,5 +7,5 @@ add_selectbox = st.sidebar.selectbox(
     ('Email', 'Home phone', 'Mobile phone')
 )
 
-df = pd.read_csv('Sample_NeMedFile')
+df = pd.read_csv('./Sample_NeMedFile')
 df
