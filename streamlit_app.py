@@ -8,5 +8,3 @@ add_selectbox = st.sidebar.selectbox(
     ('Email', 'Home phone', 'Mobile phone')
 )
 
-df = pd.read_csv('C:/Users/AshishMrig/Downloads/Sample_NeMedFile')
-df
