@@ -8,7 +8,7 @@ st.title('NE Med Faculty Summary Report FY2021' )
 
 df = pd.read_csv('./Sample_NeMedFile.csv')
 #group_labels = df[0]
-print(df.iloc[:, 0])
+st.write(df.iloc[:, 0])
 
 
 
