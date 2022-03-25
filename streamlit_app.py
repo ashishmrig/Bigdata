@@ -22,11 +22,11 @@ new_df['# visits / clinic'] = new_df['# visits / clinic'].astype(int)
 new_df['Beginning Balance'] = new_df['Beginning Balance'].astype(int)
 new_df['Ending Balance'] = new_df['Ending Balance'].astype(int)
 
-plt.figure( figsize = (15,9) )
+ax = plt.figure( figsize = (15,9) )
 plt.plot(new_df["Clinical Productivity"], new_df["RVUs"])
 plt.xlabel('Clinical Productivity', fontsize=15)
 plt.ylabel('RVUs', fontsize=15)
-st.write(plt.show())
+st.pyplot(ax)
 
 group_labels = df["Clinical Productivity"]
 st.write(group_labels)
