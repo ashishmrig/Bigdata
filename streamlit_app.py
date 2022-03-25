@@ -58,7 +58,10 @@ if ch1 == 'Ending Balance':
 
     
 ax = plt.figure( figsize = (15,9) )
-plt.plot(new_df["Clinical Productivity"], new_df[ch1], label = ch1)
+if ch1 != 'None':
+    plt.plot(new_df["Clinical Productivity"], new_df[ch1], label = ch1)
+else:
+    plt.plot()
 
 if ch2 != 'None':
     plt.plot(new_df["Clinical Productivity"], new_df[ch2], label = ch2)
