@@ -33,6 +33,27 @@ if ch1 == 'RVUs':
     ch2 = st.sidebar.radio(
     "Pick optional second metric",
     ('None', 'Clinic Visits') )
+if ch1 == 'Clinic Visits':
+    ch2 = st.sidebar.radio(
+    "Pick optional second metric",
+    ('None', 'RVUs') )
+if ch1 == 'wRVU / Clinic':
+    ch2 = st.sidebar.radio(
+    "Pick optional second metric",
+    ('None', '# visits / clinic') )
+if ch1 == '# visits / clinic':
+    ch2 = st.sidebar.radio(
+    "Pick optional second metric",
+    ('None', 'wRVU / Clinic') )
+if ch1 == 'Beginning Balance':
+    ch2 = st.sidebar.radio(
+    "Pick optional second metric",
+    ('None', 'Ending Balance') )
+if ch1 == 'Ending Balance':
+    ch2 = st.sidebar.radio(
+    "Pick optional second metric",
+    ('None', 'Beginning Balance') )
+
     
 ax = plt.figure( figsize = (15,9) )
 plt.plot(new_df["Clinical Productivity"], new_df[ch1])
