@@ -36,7 +36,7 @@ if ch1 == 'RVUs':
 ax = plt.figure( figsize = (15,9) )
 plt.plot(new_df["Clinical Productivity"], new_df[ch1])
 
-if ch2 != 'None:
+if ch2 != 'None':
     plt.plot(new_df["Clinical Productivity"], new_df[ch2])
     plt.ylabel(ch1+' & '+ch2, fontsize=15)
 else:
