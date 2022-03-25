@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 
 # Add a selectbox to the sidebar:
-st.title('NE-Med Faculty Summary Report FY2021' )
+st.title('Client Faculty Summary Report FY2021' )
 
 df = pd.read_csv('./Sample_NeMedFile.csv')
 new_df = df.T.reset_index()
