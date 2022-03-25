@@ -29,6 +29,7 @@ plt.ylabel('RVUs', fontsize=15)
 st.write(plt.show())
 
 group_labels = df["Clinical Productivity"]
+st.write(group_labels)
 
 
 
