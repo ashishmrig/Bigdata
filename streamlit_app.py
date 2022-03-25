@@ -10,6 +10,8 @@ st.title('NE-Med Faculty Summary Report FY2021' )
 df = pd.read_csv('./Sample_NeMedFile.csv')
 new_df = df.T.reset_index()
 new_df.columns = new_df.iloc[0]
+c = list(new_df.columns)
+c[0] = 'None'
 new_df = new_df.drop(df.index[0])
 
 new_df["RVUs"] = new_df["RVUs"].astype(int)
@@ -26,7 +28,7 @@ ch2 = 'None'
 st.sidebar.header("Choose the metric for Y-axis")
 ch1 = st.sidebar.radio(
     "Pick one",
-    tuple(new_df.columns)
+    tuple(c)
 )
 
 if ch1 == 'RVUs':
@@ -56,15 +58,16 @@ if ch1 == 'Ending Balance':
 
     
 ax = plt.figure( figsize = (15,9) )
-plt.plot(new_df["Clinical Productivity"], new_df[ch1])
+plt.plot(new_df["Clinical Productivity"], new_df[ch1], label = ch1)
 
 if ch2 != 'None':
-    plt.plot(new_df["Clinical Productivity"], new_df[ch2])
+    plt.plot(new_df["Clinical Productivity"], new_df[ch2], label = ch2)
     plt.ylabel(ch1+' & '+ch2, fontsize=15)
 else:
     plt.ylabel(ch1, fontsize=15)
     
 plt.xlabel('Clinical Productivity', fontsize=15)
+plt.legend()
 st.pyplot(ax)
 
 
