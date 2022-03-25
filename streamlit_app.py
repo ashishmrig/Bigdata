@@ -28,9 +28,10 @@ plt.xlabel('Clinical Productivity', fontsize=15)
 plt.ylabel('RVUs', fontsize=15)
 st.pyplot(ax)
 
-group_labels = df["Clinical Productivity"]
-st.write(group_labels)
-
+ch = st.sidebar.radio(
+    "Choose the metric for Y-axis?",
+    tuple(new_df.columns)
+)
 
 
 
