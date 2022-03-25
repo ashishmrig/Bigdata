@@ -23,14 +23,26 @@ new_df['Beginning Balance'] = new_df['Beginning Balance'].astype(int)
 new_df['Ending Balance'] = new_df['Ending Balance'].astype(int)
 
 st.sidebar.header("Choose the metric for Y-axis")
-ch = st.sidebar.radio(
+ch1 = st.sidebar.radio(
     "Pick one",
     tuple(new_df.columns)
 )
+
+if ch1 == 'RVUs':
+    ch2 = st.sidebar.radio(
+    "Pick optional second metric",
+    ('None', 'Clinic Visits') )
+    
 ax = plt.figure( figsize = (15,9) )
-plt.plot(new_df["Clinical Productivity"], new_df[ch])
+plt.plot(new_df["Clinical Productivity"], new_df[ch1])
+
+if ch2 != 'None:
+    plt.plot(new_df["Clinical Productivity"], new_df[ch2])
+    plt.ylabel(ch1+' & '+ch2, fontsize=15)
+else:
+    plt.ylabel(ch1, fontsize=15)
+    
 plt.xlabel('Clinical Productivity', fontsize=15)
-plt.ylabel(ch, fontsize=15)
 st.pyplot(ax)
 
 
