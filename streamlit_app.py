@@ -22,16 +22,17 @@ new_df['# visits / clinic'] = new_df['# visits / clinic'].astype(int)
 new_df['Beginning Balance'] = new_df['Beginning Balance'].astype(int)
 new_df['Ending Balance'] = new_df['Ending Balance'].astype(int)
 
-ax = plt.figure( figsize = (15,9) )
-plt.plot(new_df["Clinical Productivity"], new_df["RVUs"])
-plt.xlabel('Clinical Productivity', fontsize=15)
-plt.ylabel('RVUs', fontsize=15)
-st.pyplot(ax)
-
 ch = st.sidebar.radio(
     "Choose the metric for Y-axis?",
     tuple(new_df.columns)
 )
+ax = plt.figure( figsize = (15,9) )
+plt.plot(new_df["Clinical Productivity"], new_df[ch])
+plt.xlabel('Clinical Productivity', fontsize=15)
+plt.ylabel(ch, fontsize=15)
+st.pyplot(ax)
+
+
 
 
 
