@@ -22,6 +22,7 @@ new_df['# visits / clinic'] = new_df['# visits / clinic'].astype(int)
 new_df['Beginning Balance'] = new_df['Beginning Balance'].astype(int)
 new_df['Ending Balance'] = new_df['Ending Balance'].astype(int)
 
+ch2 = 'None'
 st.sidebar.header("Choose the metric for Y-axis")
 ch1 = st.sidebar.radio(
     "Pick one",
